@@ -4,9 +4,11 @@ author: "Lab Dream Team"
 date: "Week of 1/25/2021"
 output:
   html_document:
-    toc: true
-    toc_float: true
+    toc: yes
+    toc_float: yes
     theme: lumen
+  pdf_document:
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -71,6 +73,7 @@ When you click the **Knit** button in R Studio, a document will be generated tha
 ## Using R as a Calculator
 At it's most basic, R is a fancy calculator. 
 
+TODO: RUN ALL CHUNKS ABOVE
 Remember, you can run the code in this chunk by clicking the green "play" button in the upper right corner of the chunk. 
 ```{r calculatorExample}
 5 * 7
@@ -116,21 +119,44 @@ x
 X
 ```
 
+When giving things names in R, you can only use a combination of letters, numbers, periods, and underscores, and the names have to start with a letter or a period. People tend to use underscores or periods instead of spaces.
+
+Watch what happens when you try to assign something to a "bad" name:
+```{r badName1, error = T}
+tik tok <- 12
+```
+
+```{r badName2, error = T}
+4eva <- 4 * 2 
+```
+
+```{r badName3, error = T}
+_hi_mom <- 5^2
+```
+
+The errors saying "unexpected symbols" or "unexpected input" are R's way of telling you that these names are not allowed, and that you should use a different name. Here's how we'd correct these:
+```{r goodNames}
+tiktok <- 12
+forever <- 4 * 2
+dear_mother <- 5^2
+```
+
 ## CSV files: a common way to store data
 
 CSV stands for "comma separated values" and is a commonly used file type for storing data. 
 Open the file "penguins.csv" from the files pane (lower right) to see what a .csv file looks like:
-![]()
 
-Each row of the file (when you knit this document, rows are denoted by ## in the output, but ## is not in the actual file) is an "observation" or "case", and consists of one or more variables whose *values* are *separated* by *commas* (hey, look at that). The first row contains the variable names.
+![](assets/images/csv-demo.jpg)
 
-When you use the function `read.csv()`, R expects you to tell it where a .csv file is (notice that the name of the function matches the file type -- .csv!). So, inside those parentheses, you can give R a file location or a URL that tells it about a .csv file.
+Each row of the file is an "observation" or "case", and consists of one or more variables whose *values* are *separated* by *commas* (hey, look at that). The first row contains the names of the variables contained in the file.
 
 ### Palmer Penguins Data
 We're going to start by working with a data set with data on 333 penguins collected from 3 islands in the Palmer Archipeligo in Antarctica. Data were collected and made available by [Dr. Kristen Gorman](https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php)
 and the [Palmer Station, Antarctica LTER](https://pal.lternet.edu/), a member of the [Long Term Ecological Research Network](https://lternet.edu/), and the data were prepared by [Dr. Allison Horst](https://github.com/allisonhorst/palmerpenguins).
 
 ![Artwork by @allison_horst](https://github.com/allisonhorst/palmerpenguins/raw/master/man/figures/lter_penguins.png)
+
+We can **read** data into R using a function called `read.csv()`. The first argument to `read.csv()` is the name of a .csv file (here, `penguins.csv`), in quotes. We then store the results of `read.csv()` as an object called `penguins`.
 
 ```{r readData}
 penguins <- read.csv("penguins.csv", stringsAsFactors = FALSE)
@@ -152,29 +178,4 @@ We read that line as "*head* of *penguins*". Remember that `penguins` is what we
 |`body_mass_g`| A whole number denoting penguin body mass (in grams) |
 |`sex`| Penguin sex (female, male) |
 |`year`| Study year (2007, 2008, 2009) |
-
-
-![Illustration of penguin bill measurements. Artwork by @allison_horst.](https://github.com/allisonhorst/palmerpenguins/raw/master/man/figures/culmen_depth.png)
-
-### Bar Charts in R
-Let's explore our `penguins` data by making a plot that will help us visualize a categorical variable. We'll start by looking at the number of penguins observed of each species.
-
-```{r speciesPlot}
-barplot(table(penguins$species),
-     xlab = "Species",
-     ylab = "Frequency",
-     main = "Bar Chart of Number of Penguins of Each Species Observed",
-     col = c("darkorange1", "mediumorchid2", "darkcyan"))
-```
-
-Over the course of the semester, we'll talk in more depth about the "arguments" to this "function" (e.g., `xlab`, `ylab`, etc.) and how we can use them to manipulate the graphs we make.
-
-### Numerical Summaries
-In addition to analyzing data visually, we can also use R to summarize data numerically. We'll use the `summary()` function to do that for a given variable. Here, we'll summarize the `flipper_length_mm` variable, which is the length of the penguins' flippers (in millimeters). 
-
-```{r flipperSummaries}
-summary(penguins$flipper_length_mm)
-```
-
-R gives us 6 numbers: the minimum (shortest) flipper length, the first quartile, the median (middle) flipper length, the mean (average) flipper length, the third quartile, and the maximum (longest) flipper length. We'll talk about each of these in more detail later in the course!
 

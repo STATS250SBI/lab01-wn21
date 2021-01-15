@@ -1,8 +1,16 @@
 .answer {
   font-size: 12pt;
-  color: #00274c;
-  border: 1pt solid;
-  border-color: #00274c;
-  margin: 1em;
-  padding: .5em;
+  padding: .25em 1em;
+  margin-top: 2em;
+  border: 1pt solid #cccccc;
+  border-radius: 7px;
+}
+
+.question {
+  font-size: 13pt;
+  background: #f2f2f2;
+  padding: .25em 1em;
+  box-shadow: 5px 5px #e5e5e5;
+  margin-bottom: 1.5em;
+  border-radius: 7px;
 }

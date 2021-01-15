@@ -17,7 +17,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Instructions
 
-Welcome to Lab 1! Complete the following exercises designed to help get you up and running in R and RStudio.
+Welcome to Lab 1! Complete the following exercises designed to help get you up and running in R and RStudio. It is important that you keep your answers inside the ".answer" blocks. Do NOT delete the three colon blocks (:::) and keep your responses between them. Use the tutorial for help, and feel free
 
 Depending on your instruction method (synchronous or asynchronous), complete the following exercises collaboratively.
 
@@ -26,55 +26,100 @@ Depending on your instruction method (synchronous or asynchronous), complete the
 
 **Collaborators:** If applicable, replace this text with the names of anyone you collaborated with on this project.
 
-## Try It!
+# Lab Assignment
+
+## Question 1
+
+:::{.question}
+We're going to start by playing a bit with R Markdown. Read carefully through the text below and apply formatting to it as follows:
+
+1. Make the text "Tips and Tricks for R Markdown" bold.
+2. Make the text "Knit and knit often" italic.
+3. Make the text "Make sure your chunk syntax is correct" italic.
+4. Make the text "Be persistent!" bold.
+:::
+
+:::{.answer}
+Tips and Tricks for R Markdown
+
+1. Knit and knit often. You'll be turning in the knitted HTML document to Canvas for grading, and it's important that you know what it looks like!
+2. Make sure your chunk syntax is correct. You should only have one set of opening and closing backticks (```) per chunk!
+3. Be persistent! Learning this system takes time, and it's okay if you don't get it right away. Just keep trying, and don't be afraid to ask for help!
+:::
 
 
-> **1.** Which of the variables in `penguins` are *quantitative* (or *numeric*) and which are *categorical*?
+## Question 2
 
-<div class="answer">
-  
-  Replace this text with your answer. Do NOT modify 
-  
-</div>
+:::{.question}
+In the chunk below, we import ("read in") the data in `penguins.csv` and call it `pendat`. Change the name of the data to penguins. Then, run the chunk to see what the data look like, and list out the categorical and numeric variables.
+:::
 
-> **2.** Make a bar chart for the number of penguins observed on each island in the Palmer Archipelago. You will need to use the `island` variable in the `penguins` data set. *Hint: you can use existing code from above, and be sure to change the axis labels and title too!* \n
-If you have time, play around with the colors! (things like "red", "yellow", "blue" work, but see [here](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf) for a list of possible color names in R if you're more adventurous.)
+:::{.answer}
+```{r question2, error = T}
+# Change the name of the dataset to penguins
+pendat <- read.csv("penguins.csv")
 
-<div class="answer">
-
-```{r islandPlot, error = T}
-# Get started by copying and pasting the code from the speciesPlot chunk above! (Remember that this text is a comment, so it's not run by R; you can delete it if you want.)
+# Now, let's look at the first 6 rows of the data
+head(penguins)
 ```
 
-</div>
+The categorical variables in the data are:
 
-> **3.** Recreate the numerical summaries for the `bill_length_mm` variable. (*Hint: copy/paste and alter the code from earlier.*) What is the mean (average) bill length?
+The numeric variables in the data are: 
 
-  ```{r billSummaries, error = T}
-# Get started by copying and pasting the code from the flipperSummaries chunk above! (Remember that this text is a comment, so it's not run by R; you can delete it if you want.)
+:::
+
+
+## Question 3
+
+:::{.question}
+Use R as a calculator to compute the following values. Assign the first value the name `x`, the second value the name `y`, and the third `z`.
+$$\frac{27}{2 + 3^2}$$
+$$\frac{1}{3} + \frac{1}{5} \times 0.257$$
+$$92^3 - 734$$
+:::
+
+
+:::{.answer}
+```{r question3, error = T}
+# Use this code chunk to write the code necessary to answer the question. Do not start your code on this line, and do not start your code with # (this is a comment, R will ignore it).
+
 ```
+:::
 
-*Answer:* Replace this text with your answer to the question about mean bill length.
+## Question 4
 
-## Discussion
-Each week, this section of the lab will have you dive deeper into the analysis. Maybe you'll discuss a different application, or preview the next week's topic. You'll also have the chance to draw substantive conclusions from your analysis, and to think more deeply about what it is you've just done, and why. *Often, there will not be right or wrong answers here, just like in real-life applications of statistics. These questions are meant to make you think more deeply about what you've just done.*
+:::{.question}
+(a) What's something you learned in this lab?
+:::
 
-> Talk About It 1: What's something you learned today? It can be about statistics, R, penguins, or anything else related to STATS 250.
+:::{.answer}
+Write 1-2 sentences for your answer here.
+:::
 
-*Write 1-2 sentences about your answer here*
+:::{.question}
+(b) What's something you struggled with in this lab? How do you plan to improve?
+:::
 
-  > Talk About It 2: How do you think statistics can help you in your major or future career?
+:::{.answer}
+Write 1-2 sentences for your answer here.
+:::
 
-  *Write 1-2 sentences about your answer here*
+:::{.question}
+(c) What was the best part of this lab for you?
+:::
 
-  > Talk About It 3: What was the best part of lab for you today? What was a challenging part?
+:::{.answer}
+Write 1-2 sentences for your answer here.
+:::
 
-  *Write 1-2 sentences about your answer here*
 
 
-  ## Wrap-Up and Submission
 
-  At the top of the document, make sure you've changed the `author` field to your name (in quotes!). If you'd like, change the date as well.
+<hr />
+# Wrap-Up and Submission
+
+At the top of the document, make sure you've changed the `author` field to your name (in quotes!). If you'd like, change the date as well.
 
 When you've finished the lab, click the **Knit** button one last time.<br />
 ![Click the "Knit" button at the top of the editor pane"](assets/images/knit-button.jpg)
@@ -89,10 +134,10 @@ constantly update the numbering when you move things around in editing! -->
 
   #### If you're using RStudio Cloud
   1. In the Files pane, check the box next to `lab01report.html`: </br>
-  ![Check the box next to `lab01report.html`](assets/images/html-checkbox.jpg)
+  ![Check the box next to `lab01-report.html`](assets/images/html-checkbox.jpg)
 2. Click More > Export... </br>
   ![Click the More menu, then Export](assets/images/html-export.jpg)
-3. Click Download and save the file on your computer in a folder you'll remember and be able to find later. You can just call the file `lab01report.html` or whatever else you'd like (as  long as you remember what you called it). </br>
+3. Click Download and save the file on your computer in a folder you'll remember and be able to find later. You can just call the file `lab01-report.html` or whatever else you'd like (as  long as you remember what you called it). </br>
   ![Click Download to save the file](assets/images/html-download-button.jpg)
 
 #### If you're using RStudio installed on your computer
@@ -104,6 +149,6 @@ constantly update the numbering when you move things around in editing! -->
 1. Click the "Assignments" panel on the left side of the page. Scroll to find "Lab 1", and open the assignment. Click "Submit Assignment". <br />
   ![Click the Submit Assignment button in the Lab 1 assigment.](assets/images/canvas-lab1.jpg)
 
-2. Towards the bottom of the page, you'll be able to choose `lab01report.html` from the folder you saved it in from RStudio Cloud or noted if you're using RStudio Desktop. **You will only be able to upload a .html file -- do not upload any other file type.** <br />
+2. Towards the bottom of the page, you'll be able to choose `lab01-report.html` from the folder you saved it in from RStudio Cloud or noted if you're using RStudio Desktop. **You will only be able to upload a .html file -- do not upload any other file type.** <br />
   ![Upload lab01report.html to Canvas](assets/images/canvas-file-upload.jpg)
 3. Click "Submit Assignment". You're done!
