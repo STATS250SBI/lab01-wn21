@@ -61,29 +61,33 @@ R Markdown runs code contained in "chunks". A chunk looks like this:
 print("Hello world!")
 ```
 
-Notice that the code, `print("Hello world!")` is contained between three backticks (```, right below the esc key on a US English keyboard) -- this is how R Markdown knows where your chunks start and stop. You can just run a single chunk by clicking the green "play" button in the upper right corner of the chunk.
+Notice that the code, `print("Hello world!")` is contained between three backticks (```, right below the esc key on a US English keyboard; the same key as the tilde) and some stuff in curly braces {}. This is how R Markdown knows where your chunks start and stop. We'll almost always provide pre-made chunks for you to use, 
+
+You can just run a single chunk by clicking the green "play" button in the upper right corner of the chunk. It's usually a good idea to click the "Run All Chunks Above" button immediately to the left of the play button first. So you should click Run All Chunks Above, then the play button.
+
+If you can't find the play button, just highlight the code you want to run and click the Run button in the top right corner of the editor pane.
 
 When you click the **Knit** button in R Studio, a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. 
 
 ### Tips for R Markdown
 1. **Knit and knit often**: Frequently knitting your document will help you make sure that all your code works and that the document looks the way you want.
 1. **Don't be afraid to experiment**: Nobody gets things exactly right the first time, and we all forget how things work sometimes. Keep trying, and you'll eventually get what you want!
-1. **Formatting**: You can make text **bold** by surrounding it with two asterisks (`**`) and *italic* by surrounding it with one asterisk (`*`).
+1. **Formatting**: You can make text **bold** by surrounding it with two asterisks (`**`) and *italic* by surrounding it with one asterisk (`*`). You can make text `look like code` by surrounding it with single backticks.
 
 ## Using R as a Calculator
 At it's most basic, R is a fancy calculator. 
 
-TODO: RUN ALL CHUNKS ABOVE
 Remember, you can run the code in this chunk by clicking the green "play" button in the upper right corner of the chunk. 
 ```{r calculatorExample}
 5 * 7
 ```
 When you run the chunk, you'll see a `[1]` before the output of `35`. *Just ignore this. The result is `35`.*
 
-All of the symbols you think you'd use to do math work: + for addition, - for subtraction, * for multiplication, / for division, ^ for exponentiation.
+All of the symbols you think you'd use to do math work: `+` for addition, `-` for subtraction, `*` for multiplication, `/` for division, `^` for exponentiation.
 
 **Try it yourself!**
 In the chunk below, compute 50 divided by 9. You'll notice the chunk contains the text `# Write code here!`. This is called a "comment" -- it's not code that R runs, it's just there to explain your code. Feel free to delete and replace it, or start a new line and type there. See what happens!
+
 ```{r tryItCalculator, error = T}
 # Write code here! This text is a comment, so it's not run by R. Replace it with code to compute 50 divided by 9.
 
@@ -178,4 +182,11 @@ We read that line as "*head* of *penguins*". Remember that `penguins` is what we
 |`body_mass_g`| A whole number denoting penguin body mass (in grams) |
 |`sex`| Penguin sex (female, male) |
 |`year`| Study year (2007, 2008, 2009) |
+
+
+We can also peek at the data using a function called `str()` (pronounced "stir", short for "structure"):
+
+```{r strPenguins}
+str(penguins)
+```
 
