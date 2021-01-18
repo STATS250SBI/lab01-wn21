@@ -17,24 +17,18 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Learning Objectives
 
-## Statistical Learning Objectives
-<!-- This is a comment and will not show up in your document. Note that the
-numbering here is all 1's. This will automatically be converted to 1, 2, etc.
-when you knit the document; writing all 1's makes it so you don't have to 
-constantly update the numbering when you move things around in editing! -->
-1. Visualize categorical data
-1. Summarize quantitative and categorical data
-
 ## R Learning Objectives
-1. Learn the difference between R, R Studio, and R Markdown
-1. Become familiar with the R Studio interface 
+1. Learn the difference between R, RStudio, and R Markdown
+1. Become familiar with the RStudio interface 
 1. Understand key components of an R Markdown document
-1. Become familiar with R functions and arguments
+1. Learn how to use R to do basic calculations
+1. Learn how to import data into R and name objects
+  
 
 ## Functions covered in this lab
+1. `read.csv()`
 1. `head()`
-1. `barplot()`
-1. `summary()`
+1. `str()`
 
 # Lab Tutorial
 
@@ -100,7 +94,7 @@ We'll be using R primarily through the use of *functions*. A function generally 
 function.name(argument1, argument2, ...)
 ```
 
-Notice that we have the name of the function, followed immediately by an open parenthesis `(` without a space, then a sequence of *arguments* to the function, separated by commas `,`. 
+Notice that we have the name of the function, followed immediately by an open parenthesis `(` without a space, then a sequence of *arguments* to the function, separated by commas `,`, then a close parenthesis `)`. 
 
 ## R "Assignment" Syntax
 
@@ -163,7 +157,7 @@ and the [Palmer Station, Antarctica LTER](https://pal.lternet.edu/), a member of
 We can **read** data into R using a function called `read.csv()`. The first argument to `read.csv()` is the name of a .csv file (here, `penguins.csv`), in quotes. We then store the results of `read.csv()` as an object called `penguins`.
 
 ```{r readData}
-penguins <- read.csv("penguins.csv", stringsAsFactors = FALSE)
+penguins <- read.csv("penguins.csv", stringsAsFactors = TRUE)
 ```
 
 Let's see what's in the data. We can peek at the first few (6, specifically) rows of the data using the `head()` function:
@@ -190,3 +184,6 @@ We can also peek at the data using a function called `str()` (pronounced "stir",
 str(penguins)
 ```
 
+# Code Cheat Sheet
+
+## `read.csv()`

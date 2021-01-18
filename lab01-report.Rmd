@@ -85,6 +85,13 @@ $$92^3 - 734$$
 # Use this code chunk to write the code necessary to answer the question. Do not start your code on this line, and do not start your code with # (this is a comment, R will ignore it).
 
 ```
+
+```{r question3Answers, error = T, collapse = T}
+# Don't edit this chunk: it's how we'll check your work.
+x
+y
+z
+```
 :::
 
 ## Question 4
