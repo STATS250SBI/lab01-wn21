@@ -1,8 +1,8 @@
 ---
 title: "STATS 250 Lab 1 Report"
-author: "YOUR NAME GOES HERE - KEEP THE QUOTES"
-date: "TODAY'S DATE GOES HERE - KEEP THE QUOTES"
-output:
+author: "YOUR NAME GOES HERE IN QUOTES"
+date: "TODAY'S DATE GOES HERE IN QUOTES"
+output:TODAY
   html_document:
     toc: true
     toc_float: true
@@ -17,12 +17,20 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Instructions
 
-Welcome to Lab 1! Complete the following exercises designed to help get you up and running in R and RStudio. It is important that you keep your answers inside the ".answer" blocks. Do NOT delete the three colon blocks (:::) and keep your responses between them. Use the tutorial for help, and feel free
+- Complete the following exercises designed to help get you up and running in R and RStudio.
+- Keep your answers inside the ".answer" blocks. Do NOT delete the three colon blocks (:::) and keep your responses between them. 
+- Use the tutorial for help, and feel free to email your lab instructor with questions.
+- You must engage with iClicker for full credit. See below for details.
 
-Depending on your instruction method (synchronous or asynchronous), complete the following exercises collaboratively.
+## Synchronous Labs
 
-1. **Synchronous remote:** You will be placed in a Zoom breakout room to work together in small groups.
-1. **Asynchronous remote:** Use Piazza for asynchronous collaboration.
+- Participate in iClicker questions as your lab instructor asks them.
+- Complete the below assignment in your breakout rooms. If you don't finish during lab, complete the assignment on your own time.
+
+## Asynchronous Labs
+
+- Ask questions on Piazza, in office hours, or by emailing your lab instructor. If you email your lab instructor, please follow their guidelines for netiquette and allow at least 24 hours for a response.
+- Complete the participation assignment on iClicker. Open the app or go to the website, log in, click on your lab section, and select "Assignments". Answer the questions, and submit.
 
 **Collaborators:** If applicable, replace this text with the names of anyone you collaborated with on this project.
 

@@ -7,8 +7,6 @@ output:
     toc: yes
     toc_float: yes
     theme: lumen
-  pdf_document:
-    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -52,10 +50,12 @@ This is an R Markdown document. R Markdown lets you combine text, R code, and pl
 
 R Markdown runs code contained in "chunks". A chunk looks like this:
 ```{r helloWorld} 
+
 print("Hello world!")
+
 ```
 
-Notice that the code, `print("Hello world!")` is contained between three backticks (```, right below the esc key on a US English keyboard; the same key as the tilde) and some stuff in curly braces {}. This is how R Markdown knows where your chunks start and stop. We'll almost always provide pre-made chunks for you to use, 
+Notice that the code, `print("Hello world!")` is contained between three backticks (```, below the esc key on a US English keyboard; the same key as the tilde) and some stuff in curly braces {}. This is how R Markdown knows where your chunks start and stop. We'll almost always provide pre-made chunks for you to use.
 
 You can just run a single chunk by clicking the green "play" button in the upper right corner of the chunk. It's usually a good idea to click the "Run All Chunks Above" button immediately to the left of the play button first. So you should click Run All Chunks Above, then the play button.
 
@@ -186,4 +186,17 @@ str(penguins)
 
 # Code Cheat Sheet
 
-## `read.csv()`
+## `<-`
+- Assigns a value to a name
+- `name <- value`
+
+## `read.csv(file, stringsAsFactors = TRUE)`
+- `file` is the name of the file from which data are to be read
+- `stringsAsFactors` should generally be set to `TRUE` (all caps): this determines how text-like data in a CSV file is interpreted by R.
+
+## `head(x, n)`
+- `x` is a data.frame
+- `n` is the number of rows to print
+
+## `str(object)`
+- `object` is the R object about which you want to have some information (i.e., see the `str`ucture of).
