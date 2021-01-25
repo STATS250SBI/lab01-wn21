@@ -2,7 +2,7 @@
 title: "STATS 250 Lab 1 Report"
 author: "YOUR NAME GOES HERE IN QUOTES"
 date: "TODAY'S DATE GOES HERE IN QUOTES"
-output:TODAY
+output:
   html_document:
     toc: true
     toc_float: true

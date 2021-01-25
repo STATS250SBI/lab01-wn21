@@ -84,7 +84,6 @@ In the chunk below, compute 50 divided by 9. You'll notice the chunk contains th
 
 ```{r tryItCalculator, error = T}
 # Write code here! This text is a comment, so it's not run by R. Replace it with code to compute 50 divided by 9.
-
 ```
 
 ## R Function Syntax
