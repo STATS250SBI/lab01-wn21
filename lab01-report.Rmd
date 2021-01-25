@@ -95,10 +95,11 @@ $$92^3 - 734$$
 ```
 
 ```{r question3Answers, error = T, collapse = T}
-# Don't edit this chunk: it's how we'll check your work.
+# DO NOT EDIT THIS CHUNK: it's how we'll check your work. YOUR ANSWERS GO IN THE CHUNK ABOVE THIS ONE.
 x
 y
 z
+# DO NOT EDIT THIS CHUNK
 ```
 :::
 
